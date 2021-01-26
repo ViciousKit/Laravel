@@ -78,7 +78,6 @@ class TasksController extends Controller
      */
     public function update(Request $request, $id)
     {
-
         DB::table('tasks')->where('id', $id)->update(['name'=> $request->name, 'deadline' => $request->deadline]);
         return redirect('/tasks');
     }

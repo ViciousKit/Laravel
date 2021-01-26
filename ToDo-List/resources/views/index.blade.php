@@ -98,7 +98,7 @@
                                     <!-- Button trigger modal -->
 
                                     <button type="button" onclick="fillModal(dataset)" class="btn btn-primary" data-toggle="modal" id="myInput" data-target="#Modal"
-                                        data-name="{{$task->name}}" data-deadline="{{$task->deadline}}"
+                                        data-name="{{$task->name}}" data-deadline="{{$task->deadline}}" data-id="{{$task->id}}"
                                             >
                                         Edit
                                     </button>
@@ -108,13 +108,13 @@
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <form method='POST' action="{{url('tasks/'.$task->id)}}">
+                                                    <form method='POST' id = 'updateForm' action="{{url('tasks/'.$task->id)}}">
                                                         @csrf
                                                         @method('PATCH')
                                                         <div class="form-group">
                                                             <label for="name">Description</label>
                                                             <input type="text" class="form-control" id="name"
-                                                                   name='name' required value="{{$task->name}}">
+                                                                   name='name' required>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="deadline">Deadline</label>
