@@ -1,0 +1,18 @@
+canvas {
+    transform: scale(.50);
+    transform-origin: 0 0;
+    z-index: 100;
+    position: relative;
+}
+#frame {
+    width: 1903px;
+    height: 1413px;
+    transform: scale(.50);
+    transform-origin: 0 0;
+    position: absolute;
+    margin-top: -1417px;
+    margin-left: -374px;
+}
+#unclickable {
+    pointer-events: none;
+}
